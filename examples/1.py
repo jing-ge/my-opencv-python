@@ -36,7 +36,7 @@ while True:
 
     faces = face_cascade.detectMultiScale(img, 1.3, 5)
     for (x, y, w, h) in faces:
-        #cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
         if w>50 and h>50 and x>10 and y>10:
             newmaozi = cv2.resize(maozi,(w,w),interpolation=cv2.INTER_CUBIC)
             newmid1 = cv2.resize(middle1, (w, w), interpolation=cv2.INTER_CUBIC)
